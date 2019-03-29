@@ -9,12 +9,12 @@ let mainWindow
 function createWindow () {
 //创建浏览器窗口,宽高自定义具体大小你开心就好
   mainWindow = new BrowserWindow({width: 800, height: 600})
-  mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'build/index.html'),
-    protocol: 'file:',
-    slashes: true
-  }))
-  // mainWindow.loadURL('http://localhost:3000/');
+  // mainWindow.loadURL(url.format({
+  //   pathname: path.join(__dirname, 'build/index.html'),
+  //   protocol: 'file:',
+  //   slashes: true
+  // }))
+  mainWindow.loadURL('http://localhost:3000/');
 
   // 打开开发者工具，默认不打开
   // mainWindow.webContents.openDevTools()

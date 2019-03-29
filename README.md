@@ -1,9 +1,14 @@
 
 #由于没有Mac电脑测试，只在windows平台测试过
 
-#运行如下命令
-
 yarn // 安装依赖
+
+#开发模式
+yarn start
+
+electron .
+
+#生成桌面应用
 
 yarn package-win // 生成windows系统下的桌面应用
 
