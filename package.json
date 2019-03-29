@@ -43,10 +43,12 @@
   "build": {
     "productName": "question",
     "files": [
-      "dist/",
-      "electron.js",
-      "package.json"
+      "electron.js"
     ],
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
     "extraMetadata": {
       "main": "electron.js"
     }
