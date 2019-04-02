@@ -1,5 +1,5 @@
 // 引入electron并创建一个Browserwindow
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, globalShortcut} = require('electron')
 const path = require('path')
 const url = require('url')
 
@@ -23,6 +23,12 @@ function createWindow () {
   mainWindow.on('closed', function () {
     mainWindow = null
   })
+  var ret = globalShortcut.register('ctrl+shift+i', function() {
+    mainWindow.webContents.openDevTools()
+  })
+  if (!ret) {
+    console.log('registration failed');
+  }
 }
 
 // 当 Electron 完成初始化并准备创建浏览器窗口时调用此方法
