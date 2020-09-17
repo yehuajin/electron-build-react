@@ -6,6 +6,9 @@
   "author": "yhj",
   "main": "main.js",
   "homepage": ".",
+  "win": {
+    "icon": "public/favicon.ico"
+  },
   "dependencies": {
     "connected-react-router": "^6.3.2",
     "react": "^16.8.5",
@@ -20,6 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "dist": "electron-builder",
+    "package-window": "electron-packager . SCEO2.0 --platform=win32 --arch=x64 --electron-version=1.4.13 --icon=favicon.ico",
     "package-win": "yarn build && electron-builder --win --x64",
     "package-linux": "yarn build && electron-builder --linux",
     "package-mac": "yarn build && electron-builder --mac"
@@ -41,13 +45,16 @@
     "typescript": "^3.3.4000"
   },
   "build": {
-    "productName": "question",
+    "productName": "SCEO2",
     "files": [
       "electron.js"
     ],
     "directories": {
       "buildResources": "build",
       "output": "dist"
+    },
+    "win": {
+      "icon": "public/favicon.ico"
     },
     "extraMetadata": {
       "main": "electron.js"
